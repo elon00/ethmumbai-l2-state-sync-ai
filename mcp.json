@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "ethmumbai-l2-state-sync-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Arbitrum / Ethereum L2",
+        "PROJECT_TICKER": "EMSYNC"
+      },
+      "tools": [
+        {
+          "name": "verify_emsync_invariants",
+          "description": "Verifies deterministic invariants for ETHMumbai L2 State Sync AI on Arbitrum / Ethereum L2."
+        },
+        {
+          "name": "execute_emsync_action",
+          "description": "Executes authenticated Interoperability state transition."
+        }
+      ]
+    }
+  }
+}
